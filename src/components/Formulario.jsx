@@ -31,9 +31,9 @@ const Formulario = ({ setErrorMessage, setSuccessMessage }) => {
 
 return (
     <>
-        <Form className="formulario" onSubmit={validarDatos}>
-            <div className="form-group">
-                <input
+        <Form onSubmit={validarDatos}>
+        <Form.Group className="mb-3">
+                <Form.Control
                     type="text"
                     name="nombre"
                     placeholder='Ingrese su nombre'
@@ -41,9 +41,10 @@ return (
                     onChange={(e) => setNombre(e.target.value)}
                     value={nombre}
                 />
-            </div>
-            <div className="form-group">
-                <input
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                 <Form.Control
                     type="text"
                     name="email"
                     placeholder='tuemail@ejemplo.com'
@@ -51,9 +52,10 @@ return (
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                 />
-            </div>
-            <div className="form-group">
-                <input
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                 <Form.Control
                     type="password"
                     name="contraseña"
                     placeholder='Contraseña'
@@ -64,9 +66,10 @@ return (
                         }}
                     value={contraseña}
                 />
-            </div>
-            <div className="form-group">
-                <input
+             </Form.Group>
+
+             <Form.Group className="mb-3">
+                 <Form.Control
                     type="password"
                     name="confirmar"
                     placeholder='Confirmar Contraseña'
@@ -80,7 +83,7 @@ return (
                 {!passwordsMatch && (
                     <div className="invalid-feedback">Las contraseñas no coinciden.</div>
                 )}
-            </div>
+            </Form.Group>
             <Button type="submit" className="btn" onClick={validarDatos}>
                 Registrarse
             </Button>
