@@ -61,16 +61,7 @@
 
 
 
-.btn{
-  background-color: #2c8854;
-  color: white;
-  height: 3rem; 
-  cursor: pointer;
-  outline: none; 
-  height: 3rem;
-  width: 8rem;
-  margin-left: 12rem;
-}
+
 
 .alert{
   margin-top: 1rem;

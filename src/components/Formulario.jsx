@@ -54,8 +54,8 @@ return (
                 />
             </Form.Group>
 
-            <div className="form-group">
-                <input
+            <Form.Group className="mb-3">
+                 <Form.Control
                     type="password"
                     name="contraseña"
                     placeholder='Contraseña'
@@ -66,9 +66,10 @@ return (
                         }}
                     value={contraseña}
                 />
-            </div>
-            <div className="form-group">
-                <input
+             </Form.Group>
+
+             <Form.Group className="mb-3">
+                 <Form.Control
                     type="password"
                     name="confirmar"
                     placeholder='Confirmar Contraseña'
@@ -82,7 +83,7 @@ return (
                 {!passwordsMatch && (
                     <div className="invalid-feedback">Las contraseñas no coinciden.</div>
                 )}
-            </div>
+            </Form.Group>
             <Button type="submit" className="btn" onClick={validarDatos}>
                 Registrarse
             </Button>
